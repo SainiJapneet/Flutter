@@ -99,7 +99,15 @@ class CounterWidget extends State<MyStatefulWidget> {
                             Align(
                               alignment: Alignment.centerLeft,
                               child: ElevatedButton(
-                                  onPressed: onPressMinus1, child: Text("-")),
+                                onPressed: onPressMinus1,
+                                child: Text(
+                                  "-",
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        Colors.white)),
+                              ),
                             ),
                           Align(
                             alignment: Alignment.center,
@@ -112,7 +120,16 @@ class CounterWidget extends State<MyStatefulWidget> {
                               alignment: Alignment.centerRight,
                               child: ElevatedButton(
                                 onPressed: onPressPlus1,
-                                child: Text("+"),
+                                child: Text(
+                                  "+",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.white),
+                                ),
                               ),
                             )
                         ],
