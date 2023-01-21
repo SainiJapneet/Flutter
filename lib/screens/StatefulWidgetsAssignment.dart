@@ -96,15 +96,24 @@ class CounterWidget extends State<MyStatefulWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           if (myUnits > 0)
-                            ElevatedButton(
-                                onPressed: onPressMinus1, child: Text("-")),
-                          Padding(
-                              padding: EdgeInsets.all(5),
-                              child: Text(myUnits.toString())),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: ElevatedButton(
+                                  onPressed: onPressMinus1, child: Text("-")),
+                            ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: Padding(
+                                padding: EdgeInsets.all(5),
+                                child: Text(myUnits.toString())),
+                          ),
                           if (myUnits < 9)
-                            ElevatedButton(
-                              onPressed: onPressPlus1,
-                              child: Text("+"),
+                            Align(
+                              alignment: Alignment.centerRight,
+                              child: ElevatedButton(
+                                onPressed: onPressPlus1,
+                                child: Text("+"),
+                              ),
                             )
                         ],
                       ),
